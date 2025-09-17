@@ -1,0 +1,18 @@
+.pdf-chat-page {
+  display: flex;
+  height: 100vh;
+  background: #f4f6f8;
+  font-family: 'Inter', sans-serif;
+}
+.sidebar {
+  width: 280px;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 24px;
+  overflow-y: auto;
+}
+.chat-window {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}

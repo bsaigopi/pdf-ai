@@ -1,0 +1,144 @@
+.docx-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* changed from flex-start to center for vertical centering */
+  padding: 4rem 1rem;
+  background-color: #f0f2f5;
+  min-height: calc(100vh - 120px);
+}
+
+.docx-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 2rem;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.docx-card:hover {
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+}
+
+
+.docx-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #1a1a1a;
+}
+
+.docx-subtext {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #6c757d;
+}
+
+
+.docx-input {
+  width: 100%;
+  padding: 0.5rem 1rem;         /* Reduced vertical padding */
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  font-size: 1rem;
+  line-height: 1.4;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  background-color: #fff;
+}
+
+/* Specific tweaks for file input appearance */
+.docx-input[type="file"] {
+  padding: 0.4rem 0.6rem;
+  font-size: 0.95rem;
+  line-height: normal;
+  height: auto;
+}
+
+.docx-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+
+.docx-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.docx-button:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.docx-button:disabled {
+  background-color: #adb5bd;
+  cursor: not-allowed;
+}
+
+
+.docx-message {
+  margin-top: 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.docx-message.success {
+  color: #28a745;
+}
+
+.docx-message.error {
+  color: #dc3545;
+}
+
+/* Loader Animation */
+.loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.loader span {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: #007bff;
+  border-radius: 50%;
+  display: inline-block;
+  animation: bounce 0.6s infinite alternate ease-in-out;
+}
+
+
+.loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@media (max-width: 480px) {
+  .docx-card {
+    padding: 1.25rem;
+  }
+
+  .docx-heading {
+    font-size: 1.5rem;
+  }
+
+  .docx-button {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,190 @@
+/* MergePdf.css */
+
+.docx-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  min-height: 100vh;
+}
+
+.docx-card {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  width: 400px;
+  max-width: 90vw;
+  text-align: center;
+}
+
+.docx-heading {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.docx-subtext {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.docx-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.8px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.docx-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.docx-button {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.15rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.docx-button:disabled {
+  background-color: #a2c4ff;
+  cursor: not-allowed;
+}
+
+.docx-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.docx-message {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  user-select: none;
+}
+
+.docx-message.success {
+  color: #28a745;
+}
+
+.docx-message.error {
+  color: #dc3545;
+}
+
+/* Loader */
+.loader {
+  margin: 20px auto 0;
+  width: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.loader span {
+  width: 14px;
+  height: 14px;
+  background: #007bff;
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.loader span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+.loader span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+/* File list styling */
+.file-list {
+  margin-top: 10px;
+  max-height: 180px;
+  overflow-y: auto;
+  background: #f1f3f5;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.file-list h4 {
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  color: #222;
+}
+
+.file-list ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.file-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+  background: white;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+}
+
+.remove-button {
+  background: transparent;
+  border: none;
+  color: #dc3545;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 6px;
+  transition: color 0.2s ease;
+}
+
+.remove-button:hover {
+  color: #a71d2a;
+}
+
+.split-mode-toggle {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.range-inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.range-inputs .docx-input {
+  flex: 1;
+}
+
+

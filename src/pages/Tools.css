@@ -1,0 +1,66 @@
+/* pages/Tools.css */
+
+.tools-section {
+  padding: 60px 40px;
+  background-color: #f9fbfd;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.tools-heading {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+  color: #1a252f;
+}
+
+.tools-subtext {
+  font-size: 1.1rem;
+  color: #5f6c7b;
+  margin-bottom: 40px;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns always */
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+@media (max-width: 992px) {
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.tool-card {
+  background: linear-gradient(to bottom right, #ffffff, #ffffff);
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.tool-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #4e6ef2;
+}
+
+.tool-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}

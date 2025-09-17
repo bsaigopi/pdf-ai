@@ -1,0 +1,116 @@
+.landing-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(80vh - 60px);
+  padding: 0 6%;
+  background: #fefefe;
+  color: #2c2c2c;
+  gap: 2rem;
+  box-sizing: border-box;
+  flex-wrap: wrap; /* this helps prevent overflow */
+}
+
+
+.text-content {
+  flex: 1;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.landing-heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #3546b3;
+  text-align: left;
+}
+
+.landing-subtext {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #4f4f4f;
+  text-align: left;
+}
+
+.highlight {
+  color: #ff7043;
+  font-weight: bold;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.cta {
+  font-size: 1rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta.primary {
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+}
+
+.cta.primary:hover {
+  background-color: #2f3ca8;
+}
+
+.cta.secondary {
+  background-color: transparent;
+  border: 2px solid #3f51b5;
+  color: #3f51b5;
+}
+
+.cta.secondary:hover {
+  background-color: #eef0ff;
+}
+
+.graphic {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.graphic img {
+  width: 65%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .landing-container {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .text-content {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .landing-heading,
+  .landing-subtext {
+    text-align: center;
+  }
+
+  .graphic img {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+

@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  max-width: 900px;
+  margin: 30px auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+}
+
+.pdf-preview,
+.form-fields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.pdf-preview {
+  border: 1px solid #ddd;
+  padding: 15px;
+  height: 80vh;
+  overflow-y: auto;
+}
+
+.pdf-preview h3,
+.form-fields h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.form-fields input[type="file"] {
+  margin-bottom: 20px;
+}
+
+.form-fields label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-fields input[type="text"],
+.form-fields input[type="email"],
+.form-fields textarea {
+  padding: 8px 12px;
+  font-size: 1rem;
+  margin-top: 6px;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.form-fields input[type="text"]:focus,
+.form-fields input[type="email"]:focus,
+.form-fields textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-fields textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-fields button {
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-fields button:disabled {
+  background-color: #7aa7e9;
+  cursor: not-allowed;
+}
+
+.form-fields button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.message {
+  margin-top: 15px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+.message.success {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+/* Responsive for smaller devices */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .pdf-preview,
+  .form-fields {
+    height: auto;
+  }
+}
