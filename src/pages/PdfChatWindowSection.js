@@ -13,7 +13,7 @@ const PdfChatWindowSection = () => {
       setIsUploading(true);
       const reader = new FileReader();
       reader.onload = () => {
-        setPdfFile(reader.result.split(',')[1]); // Store base64 part only
+        setPdfFile(reader.result.split(',')[1]); 
         setPdfName(file.name);
         setIsUploading(false);
       };

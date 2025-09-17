@@ -26,14 +26,14 @@ const TextToPdf = () => {
 
     const reader = new FileReader();
     reader.onload = async () => {
-      const base64Text = btoa(reader.result); // Convert plain text to base64
+      const base64Text = btoa(reader.result); 
 
       try {
         setLoading(true);
         setMessage({ text: '', type: '' });
 
         const response = await axios.post(
-          'https://i31gz5lsu0.execute-api.us-east-1.amazonaws.com/prod/text-pdf', // <-- Replace with your actual endpoint
+          'https://i31gz5lsu0.execute-api.us-east-1.amazonaws.com/prod/text-pdf', 
           { txt: base64Text },
           {
             headers: {
