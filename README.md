@@ -34,6 +34,7 @@ Built with AWS Lambda, Python and OpenAI GPT-4, this project demonstrates server
 <img width="1672" height="795" alt="image" src="https://github.com/user-attachments/assets/d48ec224-2d4a-4e9f-9285-f91132ab97ca" />
 <img width="1664" height="719" alt="image" src="https://github.com/user-attachments/assets/90d6c921-9c69-4306-b0a2-153261acda27" />
 <img width="1676" height="905" alt="image" src="https://github.com/user-attachments/assets/aaf83af4-3a5e-41d5-885b-d657a9b4656f" />
+<img width="1671" height="928" alt="image" src="https://github.com/user-attachments/assets/f77d735c-8a98-46cc-9a81-6707099af43b" />
 
 
 
