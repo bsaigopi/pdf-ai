@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+📄 PDF Chat AI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An AI-powered PDF platform that combines classic PDF utilities with the ability to chat with your PDF using GPT-4.
+Built with AWS Lambda, Python and OpenAI GPT-4, this project demonstrates serverless AI deployment and real-world document intelligence.
 
-## Available Scripts
+✨ Features
+🔧 PDF Tools
 
-In the project directory, you can run:
+📎 Merge PDF – Combine multiple PDF files into one.
 
-### `npm start`
+✂️ Split PDF – Extract specific pages into a new file.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+📝 Text → PDF – Convert plain text into a styled PDF.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+💧 Watermark PDF – Add custom watermarks for branding/security.
 
-### `npm test`
+🤖 Chat with PDF
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📤 Upload any PDF
 
-### `npm run build`
+🧠 GPT-4 understands the document
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+💬 Ask natural language questions like:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+"Summarize section 2"
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+"What are the payment terms?"
 
-### `npm run eject`
+"Extract all key deadlines"
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🖼️ UI Screenshots
+🔧 PDF Utilities Dashboard
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img width="1672" height="795" alt="image" src="https://github.com/user-attachments/assets/d48ec224-2d4a-4e9f-9285-f91132ab97ca" />
+<img width="1664" height="719" alt="image" src="https://github.com/user-attachments/assets/90d6c921-9c69-4306-b0a2-153261acda27" />
+<img width="1676" height="905" alt="image" src="https://github.com/user-attachments/assets/aaf83af4-3a5e-41d5-885b-d657a9b4656f" />
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🤖 Chat with PDF Interface
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🏗️ Architecture
+graph TD
+  A[User] -->|Upload PDF| B[S3 Bucket]
+  B --> C[Lambda - PDF Tools]
+  A -->|Ask Question| D[API Gateway]
+  D --> E[Lambda - PDF Q&A]
+  E --> F[GPT-4]
+  F -->|Response| A
 
-### Code Splitting
+🛠️ Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Backend: Python 3.10, AWS Lambda, API Gateway, S3
 
-### Analyzing the Bundle Size
+AI/ML: GPT-4 via OpenAI API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+PDF Processing: PyPDF2, pdfplumber, ReportLab
 
-### Making a Progressive Web App
+Vector DB: FAISS (local) / Pinecone (cloud)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Frontend (optional): React + Tailwind
 
-### Advanced Configuration
+🚀 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Set API Keys
 
-### Deployment
+export OPENAI_API_KEY=your_api_key
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+Deploy Lambda
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+serverless deploy
+
+
+Run Frontend
+
+npm install && npm run dev
